@@ -1,0 +1,8 @@
+D:\visual studio\pushpushpush\obj\Debug\net10.0\lastoneapi.csproj.AssemblyReference.cache
+D:\visual studio\pushpushpush\obj\Debug\net10.0\rpswa.dswa.cache.json
+D:\visual studio\pushpushpush\obj\Debug\net10.0\lastoneapi.GeneratedMSBuildEditorConfig.editorconfig
+D:\visual studio\pushpushpush\obj\Debug\net10.0\lastoneapi.AssemblyInfoInputs.cache
+D:\visual studio\pushpushpush\obj\Debug\net10.0\lastoneapi.AssemblyInfo.cs
+D:\visual studio\pushpushpush\obj\Debug\net10.0\lastoneapi.csproj.CoreCompileInputs.cache
+D:\visual studio\pushpushpush\obj\Debug\net10.0\lastoneapi.MvcApplicationPartsAssemblyInfo.cs
+D:\visual studio\pushpushpush\obj\Debug\net10.0\lastoneapi.MvcApplicationPartsAssemblyInfo.cache
