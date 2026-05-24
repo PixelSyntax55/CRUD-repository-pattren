@@ -2,31 +2,38 @@ using lastoneapi.Data;
 using lastoneapi.repo;
 using lastoneapi.studu;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Identity.Client;
-
 
 namespace pushpushpush
 {
-
-    public class program
+    public class Program
     {
         public static void Main(string[] args)
         {
-            var gogo = WebApplication.CreateBuilder(args);
+            var builder = WebApplication.CreateBuilder(args);
 
-            gogo.Services.AddControllers();
+            builder.Services.AddControllers()
+    .AddJsonOptions(x => x.JsonSerializerOptions.PropertyNamingPolicy = null)
+    .ConfigureApiBehaviorOptions(options =>
+    {
+        options.SuppressInferBindingSourcesForParameters = true;
+    });
 
-            gogo.Services.AddDbContext<Db>(options => options.UseSqlServer(gogo.Configuration.GetConnectionString("Defualt Conection")));
+            builder.Services.AddDbContext<DataBase>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-            var popo = gogo.Build();
+            
+            builder.Services.AddScoped<IRepositoryPattern, RepositoryImplementation>();
 
-            popo.UseHttpsRedirection();
+            builder.Services.AddEndpointsApiExplorer();
 
-            popo.UseAuthorization();
+            builder.Services.AddScoped<IRepositoryPattern, RepositoryImplementation>();
 
-            popo.MapControllers();
+            var app = builder.Build();
 
-            popo.Run();
+            app.UseHttpsRedirection();
+            app.UseAuthorization();
+            app.MapControllers();
+            app.Run();
         }
     }
 }
