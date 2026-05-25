@@ -26,10 +26,11 @@ namespace pushpushpush
 
             builder.Services.AddEndpointsApiExplorer();
 
-            builder.Services.AddScoped<IRepositoryPattern, RepositoryImplementation>();
+            builder.Services.AddOpenApi();
 
             var app = builder.Build();
 
+            app.MapOpenApi();
             app.UseHttpsRedirection();
             app.UseAuthorization();
             app.MapControllers();
