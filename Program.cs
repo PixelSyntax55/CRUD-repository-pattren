@@ -4,6 +4,7 @@ using lastoneapi.studu;
 using Microsoft.EntityFrameworkCore;
 using Scalar.AspNetCore;
 using lastoneapi.School.Repositories;
+using lastoneapi.School.Controllers.DTOS;
 
 namespace pushpushpush
 {
@@ -25,7 +26,8 @@ namespace pushpushpush
             builder.Services.AddDbContext<DataBase>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-            
+
+            builder.Services.AddAutoMapper(typeof(MappingStudent));
 
             builder.Services.AddScoped<IRepositoryPattern, RepositoryImplementation>();
 

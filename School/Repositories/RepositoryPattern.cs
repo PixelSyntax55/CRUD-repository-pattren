@@ -9,5 +9,6 @@ namespace lastoneapi.School.Repositories
         Task<Student> CreateAsync(Student student);
         Task<Student> UpdateAsync(int Id, Student student);
         Task<bool> DeleteAsync(int Id);
+
     }
 }

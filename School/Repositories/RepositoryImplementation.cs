@@ -1,6 +1,9 @@
-﻿using lastoneapi.Data;
+﻿using AutoMapper;
+using lastoneapi.Data;
+using lastoneapi.School.controllers;
 using lastoneapi.studu;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 
 namespace lastoneapi.School.Repositories
 {
