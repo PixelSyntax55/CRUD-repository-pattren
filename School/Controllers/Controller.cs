@@ -5,7 +5,7 @@ using lastoneapi.School.Repositories;
 using lastoneapi.School;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using lastoneapi.studu;
+
 
 
 namespace lastoneapi.School.controllers
