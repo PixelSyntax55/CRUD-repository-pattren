@@ -1,4 +1,5 @@
-﻿using lastoneapi.studu;
+﻿using lastoneapi.School.Controllers.DTOS;
+using lastoneapi.studu;
 
 namespace lastoneapi.School.Repositories
 {
@@ -9,6 +10,6 @@ namespace lastoneapi.School.Repositories
         Task<Student> CreateAsync(Student student);
         Task<Student> UpdateAsync(int Id, Student student);
         Task<bool> DeleteAsync(int Id);
-
+        Task CreateAsync(ResponceStudentDto requestStudent);
     }
 }

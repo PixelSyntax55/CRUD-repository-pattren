@@ -5,6 +5,7 @@ using lastoneapi.School.Repositories;
 using lastoneapi.School;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using lastoneapi.studu;
 
 
 
@@ -53,7 +54,9 @@ namespace lastoneapi.School.controllers
 
         [HttpPost]
         public async Task<IActionResult> Create(RequestStudentDto Postrequest)
-        { 
+        {
+
+            if (!ModelState.IsValid) return BadRequest(ModelState);
 
            var RequestStudent = _mapper.Map<Student>(Postrequest);
 

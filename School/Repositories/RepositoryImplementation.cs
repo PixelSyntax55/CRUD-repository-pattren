@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using lastoneapi.Data;
 using lastoneapi.School.controllers;
+using lastoneapi.School.Controllers.DTOS;
 using lastoneapi.studu;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -54,6 +55,11 @@ namespace lastoneapi.School.Repositories
             _context.students.Remove(delo);
             await _context.SaveChangesAsync();
             return true;
+        }
+
+        public Task CreateAsync(ResponceStudentDto requestStudent)
+        {
+            throw new NotImplementedException();
         }
     }
 }
